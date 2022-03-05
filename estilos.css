@@ -1,0 +1,21 @@
+.fondomovil{
+    background-image: url(img/fotobatman3.jpg);
+    background-attachment: fixed;
+    height: 450px;
+}
+
+.pre-footer{
+  position:relative;
+  background-image: linear-gradient(5deg, #ffb745 0, #ffa73c 16.67%, #fe932f 33.33%, #f37b1f 50%, #e86211 66.67%, #e04a0b 83.33%, #db3210 100%);
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  z-index: auto;
+
+   min-height: 35vh;
+   color:#ffffff;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer{
+  background-image: radial-gradient(circle at 50% 66.59%, #564b42 0, #302f2d 25%, #061219 50%, #000000 75%, #000000 100%);
+}
