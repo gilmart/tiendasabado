@@ -4,7 +4,8 @@ let productos = [
     {nombre:"Lampara", 
     precio: 450000, 
     foto:'img/producto1.jpg',
-    descripcion:"Batimovil de la ultima pelicula de Batman original."},
+    descripcion:"Batimovil de la ultima pelicula de Batman original."   
+    },
     
     {nombre:"Poster",
     precio: 50000,
@@ -62,12 +63,45 @@ let productos = [
         
 ]
 
+// CREO LA REFERENCIA AL COMPONENTE PADRE
+// CREO UNA VARIABLE PARA ALMACENAR LA BASE
+// SOBRE LA CUAL VOY A PINTAR
+
+let fila=document.getElementById("fila")
+
 //RECORRIENDO UN ARREGLO CON JS - BUSCAR, SELECCIONAR, ESCULCAR
 
 productos.forEach(function(producto){
-    console.log("LOREM IPSUM BATMAN")
-})
+    console.log(producto.nombre)
+    console.log(producto.precio)
+    console.log(producto.foto)
+    
+    // RECETA PARA PINTAR CON JS
+    //1. COMIENCE A CREAR LA ESTRUCTURA Q NECESITA
 
+    //CREO LA COLUMNA
+    let columna=document.createElement("div")
+    columna.classList.add("col")
+    
+    //CREO LA TARJETA
+    let tarjeta=document.createElement("div")
+    tarjeta.classList.add("card")
+    tarjeta.classList.add("h-100")
+
+    //CREO LA IMAGEN
+    let foto=document.createElement("img")
+    foto.classList.add("card-im-top")
+    foto.src=producto.foto
+
+
+    //2. ORDENAR LA ESTRUCTURA -PADRES E HIJOS
+    tarjeta.appendChild(foto)
+    columna.appendChild(tarjeta)
+    fila.appendChild(columna)
+
+
+
+})
 
 
 //ESCUCHANDO CLIC EN EL BOTON
@@ -80,5 +114,8 @@ boton.addEventListener("click", cambiarFoto)
 function cambiarFoto(){
     let foto = document.getElementById("fotoPrueba")
     foto.src="img/producto1.jpg"
-
 }
+
+// RECORRER ARREGLO - LA MEJOR OPCION ES FOREACH
+
+
