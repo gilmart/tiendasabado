@@ -1,3 +1,4 @@
+ export function pintarTienda (){
 //ARREGLO DE OBJETOS
 
 let productos = [
@@ -72,9 +73,11 @@ let fila=document.getElementById("fila")
 //RECORRIENDO UN ARREGLO CON JS - BUSCAR, SELECCIONAR, ESCULCAR
 
 productos.forEach(function(producto){
+   /*
     console.log(producto.nombre)
     console.log(producto.precio)
     console.log(producto.foto)
+    */
     
     // RECETA PARA PINTAR CON JS
     //1. COMIENCE A CREAR LA ESTRUCTURA Q NECESITA
@@ -93,17 +96,27 @@ productos.forEach(function(producto){
     foto.classList.add("card-im-top")
     foto.src=producto.foto
 
+    //CREO NOMBRE
+    let titulo=document.createElement("h4")
+    titulo.classList.add("text-center")
+    titulo.textContent=producto.nombre
+
+    //CREAR BOTON
+    let boton=document.createElement("button")
+    boton.setAttribute("type","button")
+    boton.classList.add("btn","btn-warning","mx-4", "mb-4")
+    boton.textContent="ver producto"
 
     //2. ORDENAR LA ESTRUCTURA -PADRES E HIJOS
     tarjeta.appendChild(foto)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
-
-
+    tarjeta.appendChild(titulo)
+    tarjeta.appendChild(boton)
 
 })
 
-
+/*
 //ESCUCHANDO CLIC EN EL BOTON
 let boton = document.getElementById("boton")
 
@@ -116,8 +129,13 @@ function cambiarFoto(){
     foto.src="img/producto1.jpg"
 }
 
+*/
 // RECORRER ARREGLO - LA MEJOR OPCION ES FOREACH
 // RECORRER ARREGLO - LA MEJOR OPCION ES FOREACH
+
+
+}
+
 
 
 
